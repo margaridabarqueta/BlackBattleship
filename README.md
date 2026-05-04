@@ -1,7 +1,7 @@
 # ⚓ BlackBattleship
 
 
-# 👤 Grupo
+👤 **Grupo**
 * Margarida Barqueta (122973)
 * 
 *
