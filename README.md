@@ -1,16 +1,12 @@
 # ⚓ BlackBattleship
 
----
-
-**Grupo:**
+# 👤 Grupo
 * Margarida Barqueta (122973)
 * 
 *
 * 
 
----
-
-# Scrum Product Backlog - User Stories
+# 📝 Scrum Product Backlog - User Stories
 
 **Jogabilidade Base (Batalha Naval)**
 * US01: Como jogador, quero posicionar os meus navios de forma manual ou automática (aleatória) no tabuleiro, para poder iniciar a partida rapidamente.
