@@ -13,8 +13,8 @@ public class BattleshipPage {
     private By btnConfirmNickname = By.xpath("//button[contains(text(), 'Continue')]");
     //US03
     private By linkGuides = By.cssSelector("a[href*='game-guides']");
-
-    //US
+    //US07
+    private By linkShop = By.cssSelector("a[href*='/shop']");
 
     public BattleshipPage(WebDriver driver) {
         this.driver = driver;
@@ -40,6 +40,13 @@ public class BattleshipPage {
         org.openqa.selenium.WebElement menuGuides = driver.findElement(linkGuides);
         org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", menuGuides);
+    }
+
+    //US07
+    public void goToShop() {
+        org.openqa.selenium.WebElement menuShop = driver.findElement(linkShop);
+        org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", menuShop);
     }
 
 }
