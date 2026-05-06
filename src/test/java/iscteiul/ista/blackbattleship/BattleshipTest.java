@@ -54,4 +54,24 @@ public class BattleshipTest {
         Thread.sleep(10000);
     }
 
+    @Test
+    @DisplayName("US03: Aceder aos Guias de Jogo")
+    public void testGameGuides() throws InterruptedException {
+        System.out.println("A iniciar missão US03...");
+        Thread.sleep(4000);
+
+        try {
+            org.openqa.selenium.WebElement cookieButton = driver.findElement(By.xpath("//*[text()='Consent' or contains(text(), 'Consent')]"));
+            org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", cookieButton);
+            Thread.sleep(2000);
+        } catch (Exception e) {
+            System.out.println("Sem cookies no radar...");
+        }
+
+        System.out.println("A navegar para os Guias de Jogo...");
+        page.goToGuides();
+        Thread.sleep(5000);
+    }
+
 }
