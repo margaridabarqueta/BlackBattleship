@@ -10,7 +10,7 @@
 # 📝 Scrum Product Backlog - User Stories
 
 **Jogabilidade Base (Batalha Naval)**
-* US01: Como jogador, quero posicionar os meus navios de forma manual ou automática (aleatória) no tabuleiro, para poder iniciar a partida rapidamente.
+* US01: Como jogador, quero iniciar uma partida rápida contra o Computador (Robot) indicando um nickname automático, para aceder diretamente ao tabuleiro de jogo.
 * US02: Como jogador, quero selecionar células no tabuleiro do adversário para efetuar disparos e tentar afundar a frota inimiga.
 * US03: Como novo jogador, quero aceder à secção de guias de jogo (Game Guides), para compreender as regras específicas e mecânicas desta versão online.
 
