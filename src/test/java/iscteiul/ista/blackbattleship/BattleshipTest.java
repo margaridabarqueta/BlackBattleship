@@ -94,4 +94,25 @@ public class BattleshipTest {
         Thread.sleep(5000);
     }
 
+    @Test
+    @DisplayName("US12: Aceder à página de Pricing")
+    public void testPricing() throws InterruptedException {
+        System.out.println("A iniciar missão US12: Subscrições...");
+        Thread.sleep(4000);
+
+        try {
+            org.openqa.selenium.WebElement cookieButton = driver.findElement(By.xpath("//*[text()='Consent' or contains(text(), 'Consent')]"));
+            org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", cookieButton);
+            Thread.sleep(2000);
+        } catch (Exception e) {
+            System.out.println("Caminho limpo de cookies...");
+        }
+
+        System.out.println("A abrir a página de Pricing...");
+        page.goToPricing();
+
+        Thread.sleep(5000);
+    }
+
 }

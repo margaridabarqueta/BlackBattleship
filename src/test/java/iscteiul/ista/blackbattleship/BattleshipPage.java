@@ -15,6 +15,8 @@ public class BattleshipPage {
     private By linkGuides = By.cssSelector("a[href*='game-guides']");
     //US07
     private By linkShop = By.cssSelector("a[href*='/shop']");
+    //US12
+    private By linkPricing = By.cssSelector("a[href*='/pricing']");
 
     public BattleshipPage(WebDriver driver) {
         this.driver = driver;
@@ -47,6 +49,13 @@ public class BattleshipPage {
         org.openqa.selenium.WebElement menuShop = driver.findElement(linkShop);
         org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", menuShop);
+    }
+
+    //US12
+    public void goToPricing() {
+        org.openqa.selenium.WebElement menuPricing = driver.findElement(linkPricing);
+        org.openqa.selenium.JavascriptExecutor executor = (org.openqa.selenium.JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", menuPricing);
     }
 
 }
