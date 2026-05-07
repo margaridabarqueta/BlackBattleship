@@ -1,0 +1,141 @@
+{
+  "id": "1621bc91-5014-4dee-91c0-33ab646efc08",
+  "version": "2.0",
+  "name": "TestSuite_122973",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "5db37bcf-3867-4a05-a81e-5b55469cb40f",
+    "name": "US03",
+    "commands": [{
+      "id": "ec2bc64f-2928-4078-9965-b5e63f31f576",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47290f32-2edc-4db0-94d8-9cbd5604efb4",
+      "comment": "",
+      "command": "Inicialização da dimensão da janela",
+      "target": "1296x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0ea531e-78e9-4a86-b8cc-c439f2ca1a65",
+      "comment": "",
+      "command": "Fiz scroll na página",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "919e0ef0-7a84-4454-aa4a-9206ae3b3b55",
+      "comment": "",
+      "command": "Cliquei \"Game Guide\"",
+      "target": "linkText=Game guides",
+      "targets": [],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win518",
+      "windowTimeout": 2000
+    }]
+  }, {
+    "id": "6998abc6-7bf3-462e-89ba-fe4a41a7b948",
+    "name": "US07",
+    "commands": [{
+      "id": "ffcbbf90-e6d7-438f-8c6f-13123dbaa6ca",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18197ef6-bf83-45ec-8ed5-42c5ffe54a88",
+      "comment": "",
+      "command": "Inicialização da dimensão da janela",
+      "target": "1296x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73f49403-db36-47a2-85cc-c5421189006a",
+      "comment": "",
+      "command": "Cliquei em \"Shop\"",
+      "target": "linkText=Shop",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "23d2fed9-4c19-4c9e-b335-6d0eefdfcdc1",
+    "name": "US12",
+    "commands": [{
+      "id": "0e3bc265-0964-4e06-b26e-69ec21cdf2e1",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f52bd17d-b132-48ab-8573-04845f94e212",
+      "comment": "",
+      "command": "Inicialização da dimensão da janela",
+      "target": "1296x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e12425aa-d7df-4da0-ba2b-2adfd113c8c8",
+      "comment": "",
+      "command": "Cliquei em \"Pricing\"",
+      "target": "linkText=Pricing",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "77b0a3e2-7d14-47c9-930d-63066fbb770e",
+    "name": "US01",
+    "commands": [{
+      "id": "ee26eb9d-f660-4642-8cc0-b469607f2232",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ae857a4-2b28-44c0-a97f-f95ed85c54f5",
+      "comment": "",
+      "command": "Inicialização da dimensão da janela",
+      "target": "1296x736",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fd51236-6feb-424f-a7c6-3d8d36b21a8a",
+      "comment": "",
+      "command": "Cliquei em \"Play vs robot\"",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ab30dc32-c9f8-4504-b281-240aa4f02bae",
+      "comment": "",
+      "command": "Escrevi o username \"Marga\"",
+      "target": "css=.input-xl",
+      "targets": [],
+      "value": "Marga"
+    }, {
+      "id": "bed8ae46-3211-4aba-be7f-9a809377bbc3",
+      "comment": "",
+      "command": "Cliquei em \"Continue\"",
+      "target": "css=.p-3 > .btn",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f48ad47c-29cd-4ad7-8f61-1fbca40a79ed",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
