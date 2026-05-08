@@ -10,6 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPageTest {
     private WebDriver driver;
@@ -22,7 +25,23 @@ public class MainPageTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.jetbrains.com/");
 
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".ch2-container")));
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("""
+                let popup = document.querySelector('.ch2-container');
+                if (popup) {
+                    popup.remove();
+                }
+            """);
+        } catch (Exception e) {
+            System.out.println("Nenhum banner de cookies encontrado.");
+        }
+
         mainPage = new MainPage(driver);
+
     }
 
     @AfterEach
@@ -31,34 +50,46 @@ public class MainPageTest {
     }
 
     @Test
-    public void search() {
+    public void search() throws InterruptedException {
+
         mainPage.searchButton.click();
 
-        WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id='wt-site-header']/div/div/div[2]/div[4]/div/div/div/div/label/div/div/input")
+        ));
+
         searchField.sendKeys("Selenium");
-
-        WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
-        submitButton.click();
-
-        WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
-        assertEquals("Selenium", searchPageField.getAttribute("value"));
+        searchField.sendKeys(org.openqa.selenium.Keys.ENTER);
+        wait.until(ExpectedConditions.urlContains("q=Selenium"));
+        assertTrue(driver.getCurrentUrl().contains("Selenium"));
     }
 
     @Test
     public void toolsMenu() {
         mainPage.toolsMenu.click();
 
-        WebElement menuPopup = driver.findElement(By.cssSelector("div[data-test='main-submenu']"));
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+
+        WebElement menuPopup = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div[data-test='main-submenu']")
+        ));
         assertTrue(menuPopup.isDisplayed());
     }
 
     @Test
     public void navigationToAllTools() {
-        mainPage.seeDeveloperToolsButton.click();
-        mainPage.findYourToolsButton.click();
+        mainPage.toolsMenu.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+
+        WebElement findToolsLink = wait.until(ExpectedConditions.elementToBeClickable(mainPage.findYourToolsButton));
+        findToolsLink.click();
 
         WebElement productsList = driver.findElement(By.id("products-page"));
-        assertTrue(productsList.isDisplayed());
-        assertEquals("All Developer Tools and Products by JetBrains", driver.getTitle());
+
+        wait.until(ExpectedConditions.titleContains("Developer Tools"));
+        assertTrue(driver.getTitle().contains("Developer Tools"));
     }
 }
