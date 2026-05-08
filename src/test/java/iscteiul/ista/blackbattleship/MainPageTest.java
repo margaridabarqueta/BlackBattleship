@@ -31,33 +31,42 @@ public class MainPageTest {
     }
 
     @Test
-    public void search() {
+    public void search() throws InterruptedException {
         mainPage.searchButton.click();
+        Thread.sleep(2000);
 
         WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
         searchField.sendKeys("Selenium");
+        Thread.sleep(2000);
 
         WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
         submitButton.click();
+        Thread.sleep(2000);
 
         WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
+        Thread.sleep(2000);
         assertEquals("Selenium", searchPageField.getAttribute("value"));
     }
 
     @Test
-    public void toolsMenu() {
+    public void toolsMenu() throws InterruptedException {
         mainPage.toolsMenu.click();
+        Thread.sleep(2000);
 
         WebElement menuPopup = driver.findElement(By.cssSelector("div[data-test='main-submenu']"));
+        Thread.sleep(2000);
         assertTrue(menuPopup.isDisplayed());
     }
 
     @Test
-    public void navigationToAllTools() {
+    public void navigationToAllTools() throws InterruptedException {
         mainPage.seeDeveloperToolsButton.click();
+        Thread.sleep(2000);
         mainPage.findYourToolsButton.click();
+        Thread.sleep(2000);
 
         WebElement productsList = driver.findElement(By.id("products-page"));
+        Thread.sleep(2000);
         assertTrue(productsList.isDisplayed());
         assertEquals("All Developer Tools and Products by JetBrains", driver.getTitle());
     }
