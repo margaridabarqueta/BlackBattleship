@@ -5,7 +5,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -53,14 +56,20 @@ public class UserStory9Test {
      * Cenário de Teste: Valida se o clique no link "Goodies" abre a loja num novo separador.
      */
     @Test
-    public void testAcederLojaGoodies() {
+    public void testAcederLojaGoodies() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         // Guarda o ID do separador original da Batalha Naval
         String separadorOriginal = driver.getWindowHandle();
 
-        // Espera que o elemento fique disponível e faz o clique no link "Goodies"
-        wait.until(ExpectedConditions.elementToBeClickable(us9Page.goodiesLink)).click();
+        Thread.sleep(2000);
+
+        // Espera que o elemento exista na página
+        WebElement botaoGoodies = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(.,'Goodies')]")));
+
+        // Faz um clique forçado via JavaScript para ignorar o banner de cookies/anúncios
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", botaoGoodies);
+        Thread.sleep(2000);
 
         // O link "Goodies" abre num novo separador. Precisamos mudar o foco do driver para lá.
         Set<String> todosSeparadores = driver.getWindowHandles();
