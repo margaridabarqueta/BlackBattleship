@@ -17,7 +17,6 @@ public class GuidesSelenideTest {
         page.acceptCookies();
         page.goToGameGuides();
 
-        // Pausa apenas para a Comandante conseguir ver o resultado final com os próprios olhos
         sleep(5000);
     }
 }
