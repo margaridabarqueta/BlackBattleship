@@ -7,6 +7,9 @@
 *
 * 
 
+📺 **[Vídeo de Demonstração - Ficha 05]**
+https://youtu.be/Je61bpdXBns
+
 # 📝 Scrum Product Backlog - User Stories
 
 **Jogabilidade Base (Batalha Naval)**
