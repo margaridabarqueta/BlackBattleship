@@ -8,7 +8,7 @@
 * 
 
 📺 **[Vídeo de Demonstração - Ficha 05]**
-https://youtu.be/Je61bpdXBns
+https://youtu.be/_hdQPzqiG2A
 
 # 📝 Scrum Product Backlog - User Stories
 
