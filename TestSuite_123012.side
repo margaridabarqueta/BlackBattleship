@@ -1,0 +1,152 @@
+{
+  "id": "22d1f422-eadf-46e5-bdb6-e3a704da593d",
+  "version": "2.0",
+  "name": "TestSuite_123012",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "2e6b32f5-864c-4fe7-becc-54809113969f",
+    "name": "UserStoryTest1",
+    "commands": [{
+      "id": "2ba98c64-45ba-4c91-8eee-9d1c2f9c9427",
+      "comment": "",
+      "command": "open",
+      "target": "/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00040dae-e619-4acd-9db9-74ee66d4b430",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "648x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbeb5fd2-2630-41c6-b2b0-cb3d6ce1e824",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7216573-0c60-4056-a478-73e3ee9d2dfd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.position-relative > .front",
+      "targets": [
+        ["css=.position-relative > .front", "css:finder"],
+        ["xpath=//a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cd42d02-d228-4c9a-9bed-a4d5d20d9b86",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.position-relative > .front",
+      "targets": [
+        ["css=.position-relative > .front", "css:finder"],
+        ["xpath=//a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aedc7775-a883-4eec-9ae6-c47fcd3073b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee1ce7f2-f929-4cfd-87af-d2dfc92ab89c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TestBot123"
+    }, {
+      "id": "130d0252-413c-4f4a-a8c5-922fe40853db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca5d7a2c-c7f6-44ac-9a29-2ca2e95735ea",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c69f984-0854-4350-9afb-02e4ff5e6f91",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.position-relative > .front",
+      "targets": [
+        ["css=.position-relative > .front", "css:finder"],
+        ["xpath=//a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82a029e7-0055-4a25-a04a-7e5a6148da49",
+      "comment": "Aceitar cookies",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da8edffd-e6c8-4f94-8396-5f724b2eb571",
+      "comment": "Clicar em play vs bot",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21b4e973-2fdf-4658-baee-3d60dd7068b9",
+      "comment": "Escrever nickname",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d340a797-29db-4215-be92-1ab8dae0a75d",
+      "comment": "clicar em continuar",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3a900247-e4aa-4c82-8fbc-088c538f100c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2e6b32f5-864c-4fe7-becc-54809113969f"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
